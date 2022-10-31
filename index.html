@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập if else</title>
+
+    <!-- BS 5  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- MAIN CSS  -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="content">
+        <div class="container">
+            <div class="main">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab">Bài 1</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab">Bài 2</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab">Bài 3</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab">Bài 4</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content contentTab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel">
+                        <h3>Tính ngày tháng năm</h3>
+                        <form action="">
+                            <input id="ngay" type="number" min="1" max="31" placeholder="Nhập ngày">
+                            <input id="thang" type="number" min="1" max="12" placeholder="Nhập tháng">
+                            <input id="nam" type="number" min="1" placeholder="Nhập năm"> <br>
+                            <button onclick="ngayHomQua()" class="btn btn-success mt-4" type="button" id="homqua">Ngày hôm qua</button>
+                            <button onclick="ngayMai()" class="btn btn-success mt-4" type="button" id="ngaymai">Ngày mai</button>
+                        </form>
+                        <div class="ketqua" id="result1"></div>
+                    </div>
+                    <div class="tab-pane fade " id="profile-tab-pane" role="tabpanel">
+                        <h3>Tính ngày</h3>
+                        <form action="">
+                            <input type="number" min="1" max="12" id="thangb2" placeholder="Nhập tháng">
+                            <input type="number" min="1" id="namb2" placeholder="Nhập năm"> <br>
+                            <button onclick="tinhNgay()" class="btn btn-success mt-4" id="tinhngay" type="button">Tính ngày</button>
+                        </form>
+                        <div class="ketqua" id="result2"></div>
+                    </div>
+                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" >
+                        <h3>Đọc số</h3>
+                        <form action="">
+                            <input type="number" min="100" max="999" id="numb3" placeholder="Nhập số gồm 3 chữ số"> <br>
+                            <button onclick="docSo()" class="btn btn-success mt-4" id="tinhngay" type="button">Đọc số</button>
+                        </form>
+                        <div class="ketqua" id="result3"></div>
+                    </div>
+                    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" >
+                      <h3>Tìm sinh viên xa trường nhất</h3>
+                      <form action="">
+                        <label for="">Sinh viên 1</label> <br>
+                        <input id="nameStudent1" type="text" placeholder="Nhập tên">
+                        <input id="toadox1" type="number" placeholder="Nhập toạ độ x">
+                        <input id="toadoy1" type="number" placeholder="Nhập toạ độ y"> <br> <br>
+
+                        <label for="">Sinh viên 2</label> <br>
+                        <input id="nameStudent2" type="text" placeholder="Nhập tên">
+                        <input id="toadox2" type="number" placeholder="Nhập toạ độ x">
+                        <input id="toadoy2" type="number" placeholder="Nhập toạ độ y"> <br> <br>
+
+                        <label for="">Sinh viên 3</label> <br>
+                        <input id="nameStudent3" type="text" placeholder="Nhập tên">
+                        <input id="toadox3" type="number" placeholder="Nhập toạ độ x">
+                        <input id="toadoy3" type="number" placeholder="Nhập toạ độ y"> <br> <br>
+
+                        <label for="">Trường học</label> <br>
+                        <input id="xSchool" type="number" placeholder="Nhập toạ độ x">
+                        <input id="ySchool" type="number" placeholder="Nhập toạ độ y"> <br>
+                        
+                        <button onclick="timSinhVien()" class="btn btn-success mt-4" type="button" id="homqua">Tìm</button>
+                        
+                    </form>
+                    <div class="ketqua" id="result4"></div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BS 5  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- MAIN JS  -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
